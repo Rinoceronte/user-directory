@@ -18,6 +18,7 @@ class App extends Component {
 
     this.previous = this.previous.bind(this);
     this.next = this.next.bind(this);
+    this.nextt = this.nextt.bind(this);
     this.edit = this.edit.bind(this);
     this.createNewUser = this.createNewUser.bind(this);
     this.delete = this.delete.bind(this);
@@ -116,7 +117,7 @@ class App extends Component {
       <header><h1>Home</h1></header>
       <div className="content">
         <Card user={this.state.directory[this.state.index]} _index={this.state.index} cards={this.state.directory.length} />
-        <Nav prev={this.previous} next={this.next} />
+        <Nav prev={this.previous} next={this.nextt} />
         <div id="editing">
           <button onClick={this.delete}>Delete</button>
           <button onClick={this.editUser}>Edit</button>
